@@ -1,25 +1,20 @@
-appleWeightKG = 0.2
-appleWeightLB = 0.4
-appleRequest = input("Hello, how many apples would you like today?")
-appleAmmount = int(appleRequest)
+import math 
 
-print("you would like "+ appleRequest + " Apples.")
+appleWeightKG = (1 / 5)
 
-print("Would you like your apples to be weighed in lbs or kgs?")
+appleWeightLBS = (2.2 / 5)
 
-appleMass = input("If you would like your apples weighed in KG please type 1, if you would like your apples weighed in LBS please type 2: ")
-massValue = int(appleMass)
-
-if massValue == 1:
-    appleCostKG = float(appleAmmount) * appleWeightKG
-    print("Your Apples weigh",appleCostKG, "Kgs")
-elif massValue == 2:
-    appleCostLB = int(appleRequest) * appleWeightLB
-    print("Your Apples weighs" * appleCostLB, "lbs")
-else: 
-    print("invalid input")
+appleRequest = int(input("Hello, how many apples would you like today?"))
+weightRequest = input("Great! would you like them weighed in LBS or KG?")
 
 
+if weightRequest == "lbs":
+    lbsApple = appleWeightLBS * appleRequest
+    print("Your Apples Weigh:", lbsApple, "lbs") 
+elif weightRequest == "kg":
+    kgApple = appleWeightKG * appleRequest
+    print("Your Apples Weigh:", kgApple, "kg")
+else:
+    print("Please try again. Invalid input")
 
-#apples = 5 * appleWeight
-
+    
